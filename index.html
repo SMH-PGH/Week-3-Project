@@ -231,34 +231,7 @@
     </div>
   </footer  Add JavaScript here -->
   <script>
-    (function () {
-      const rtlSet = new Set(['ar', 'he', 'fa', 'ur', 'ps', 'sd', 'ug', 'yi', 'ku']);
-      const defaultLang = 'en';
-      const link = document.getElementById('bootstrap-css');
-      const ltrHref = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css';
-      const rtlHref = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css';
-
-      function applyDirection(lang = defaultLang) {
-        const base = (lang || defaultLang).split('-')[0].toLowerCase();
-        const useRtl = rtlSet.has(base);
-        document.documentElement.lang = base;
-        document.documentElement.dir = useRtl ? 'rtl' : 'ltr';
-        if (link) link.href = useRtl ? rtlHref : ltrHref;
-      }
-
-      document.addEventListener('DOMContentLoaded', () => {
-        applyDirection(document.documentElement.lang);
-
-        new MutationObserver((mutations) => {
-          for (const m of mutations) {
-            if (m.type === 'attributes' && m.attributeName === 'lang') {
-              applyDirection(document.documentElement.lang);
-              break;
-            }
-          }
-        }).observe(document.documentElement, { attributes: true });
-      });
-    })();
+    
   </script>
 </body>
 </html>
