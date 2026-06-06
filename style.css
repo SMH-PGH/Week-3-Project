@@ -119,9 +119,14 @@ section p{
   min-width: 800px;
   min-height:200px;
   margin-top:80px;
-  margin-right:200px;
+  margin-bottom:20px;
   padding: 20px;
   text-align: center;
+}
+.site-footer p{
+ text-align:center;
+  color:white;
+  font-size:10px;
 }
 
 @media  (max-width:600px){
