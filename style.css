@@ -132,21 +132,29 @@ section p{
   font-size:10px;
 }
 
-@media  (max-width:600px){
-  .timeline container{
+@media (max-width: 600px) {
+  .timeline-container {
     flex-direction: column;
-    max-width:100%;
-    width:100%;
-    margin-bottom:10px;
-    align-items:center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+    align-items: center;
+    outline: none;
   }
-  p{
-    text-align:center;
-    padding-inline-start:10px;
+
+  section {
+    min-width: auto;
+    width: 100%;
+    outline: none;
   }
-  * {
-}
-  header{
-    padding-inline-start:10px;
+
+  p {
+    text-align: center;
+    padding-inline-start: 10px;
+  }
+
+  header {
+    padding-inline-start: 10px;
   }
 }
